@@ -1,0 +1,1 @@
+python main.py -m r_raw -year 2022 -month 10 --raw_folder D:\sed\jsDB\raw
