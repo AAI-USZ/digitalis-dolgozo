@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  NER_Sentiment:
+    image: ner_sentiment
+    container_name: ner_sentiment
+    build:
+      context: .
+    volumes:
+      - ./data/:/app/ner_sentiment/data/
+    tty: true

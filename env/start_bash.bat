@@ -1,0 +1,1 @@
+docker exec -it ner_sentiment bash

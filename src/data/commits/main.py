@@ -1,8 +1,5 @@
 import fetcher
 import repo_fetcher
-from func_parser import parse_commits
-from func_parser import parse_repo_commits
-from stats import generate_stats
 import argparse
 import os
 
@@ -44,22 +41,6 @@ def main():
                            out_folder=commit_folder,
                            line_number=int(args.last_line),
                            token=args.gh_token)
-
-    elif args.mode == 'stat':
-        generate_stats(commit_folder=commit_folder,
-                       stats_folder=stats_folder)
-    elif args.mode == 'parse':
-        parse_commits(commit_folder=commit_folder,
-                      file_folder=file_folder,
-                      stats_folder=stats_folder,
-                      max_idioms=int(args.max_idioms),
-                      last_commit=args.last_commit)
-    elif args.mode == 'repo_parse':
-        parse_repo_commits(commit_folder=commit_folder,
-                      file_folder=file_folder,
-                      stats_folder=stats_folder,
-                      max_idioms=int(args.max_idioms),
-                      last_commit=args.last_commit)
 
 
 def handle_params():

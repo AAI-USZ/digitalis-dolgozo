@@ -5,8 +5,8 @@ import csv
 
 model = AutoModelForTokenClassification.from_pretrained("akdeniz27/bert-base-hungarian-cased-ner")
 tokenizer = AutoTokenizer.from_pretrained("akdeniz27/bert-base-hungarian-cased-ner")
+
 nlp = pipeline('ner', model=model, tokenizer=tokenizer, aggregation_strategy="first")
-ner("<your text here>")
 
 
 with open('./data/eslint-eslint-issues.csv', 'r', encoding='UTF-8') as issues_csv, \
