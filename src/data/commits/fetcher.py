@@ -10,7 +10,7 @@ import time
 from datetime import datetime
 
 
-def get_request(request_url, auth=True, token='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'):
+def get_request(request_url, auth=True, token=''):
     session = requests.Session()
     adapter = HTTPAdapter(max_retries=Retry(connect=4, backoff_factor=0.5))
     session.mount('http://', adapter)

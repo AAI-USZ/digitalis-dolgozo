@@ -40,7 +40,7 @@ def fetch_raw(out_folder, year, month, token, language):
 
     ghapi = 'https://api.github.com/search/'
     try:
-        repo_request = f'{ghapi}repositories?q=followers:>=1000 stars:>=100 language:{language} pushed:>{year}-{month}-01 is:public&sort=stars&order=desc&per_page=100'
+        repo_request = f'{ghapi}repositories?q=followers:>=1000 stars:>=100 pushed:>{year}-{month}-01 is:public&per_page=100'
         r = make_request_trial(f'{repo_request}&page=1', token)
 
         if not r.ok:

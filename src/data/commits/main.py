@@ -56,7 +56,7 @@ def handle_params():
     parser.add_argument('-ll', '--last_line', default=0)
     parser.add_argument('-lc', '--last_commit')
     parser.add_argument('-mi', '--max_idioms', default=500)
-    parser.add_argument('-gt', '--gh_token', default='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')
+    parser.add_argument('-gt', '--gh_token')
     parser.add_argument('-l', '--language', default='js')
 
     return parser.parse_args()
