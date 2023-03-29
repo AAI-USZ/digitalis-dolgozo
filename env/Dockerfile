@@ -4,6 +4,7 @@ WORKDIR /app/ner_sentiment
 
 COPY ./requirements.txt /app/ner_sentiment/requirements.txt
 COPY ./NER-base.py /app/ner_sentiment/NER-base.py
+COPY ./Sentiment.py /app/ner_sentiment/Sentiment.py
 
 RUN pip install -r ./requirements.txt
 
